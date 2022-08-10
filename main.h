@@ -7,7 +7,10 @@
 #include <unistd.h>
 
 /* Flag Modifier Macros */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 #define PLUS 1
 #define SPACE 2
 #define HASH 4
@@ -20,7 +23,10 @@
 #define NEG_FLAG ((flags >> 4) & 1)
 
 /* Length Modifier Macros */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 #define SHORT 1
 #define LONG 2
 
@@ -30,9 +36,13 @@
  * @start: A pointer to the start of buffer.
  * @len: The length of the string stored in buffer.
  */
+<<<<<<< HEAD
 
 typedef struct buffer_s
 
+=======
+typedef struct buffer_s
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 {
 	char *buffer;
 	char *start;
@@ -44,9 +54,13 @@ typedef struct buffer_s
  * @specifier: A character representing a conversion specifier.
  * @func: A pointer to a conversion function corresponding to specifier.
  */
+<<<<<<< HEAD
 
 typedef struct converter_s
 
+=======
+typedef struct converter_s
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 {
 	unsigned char specifier;
 	unsigned int (*func)(va_list, buffer_t *,
@@ -58,6 +72,7 @@ typedef struct converter_s
  * @flag: A character representing a flag.
  * @value: The integer value of the flag.
  */
+<<<<<<< HEAD
 
 typedef struct flag_s
 
@@ -65,12 +80,21 @@ typedef struct flag_s
 	unsigned char flag;
 	unsigned char value;
 
+=======
+typedef struct flag_s
+{
+	unsigned char flag;
+	unsigned char value;
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 } flag_t;
 
 int _printf(const char *format, ...);
 
 /* Conversion Specifier Functions */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 unsigned int convert_c(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_s(va_list args, buffer_t *output,
@@ -99,7 +123,10 @@ unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
 /* Handlers */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 unsigned char handle_flags(const char *flags, char *index);
 unsigned char handle_length(const char *modifier, char *index);
 int handle_width(va_list args, const char *modifier, char *index);
@@ -108,7 +135,10 @@ unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 		unsigned char, int, int, unsigned char);
 
 /* Modifiers */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dce141151ca78ac233ccfa96174f0b0fcca021fe
 unsigned int print_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
 unsigned int print_string_width(buffer_t *output,
