@@ -29,10 +29,7 @@ struct fmt
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> 9483ee628497861f34785a4c32f62fa39780611d
 
 /**
  * typedef struct fmt fmt_t - Struct op
@@ -69,10 +66,7 @@ int print_hexadecimal(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-<<<<<<< HEAD
-=======
 
->>>>>>> 9483ee628497861f34785a4c32f62fa39780611d
 int print_hexa(va_list types, char map_to[],
 char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
@@ -105,7 +99,6 @@ int write_number(int is_positive, int ind, char buffer[],
 	int flags, int width, int precision, int size);
 int write_num(int ind, char bff[], int flags, int width, int precision,
 	int length, char padd, char extra_c);
-
 int write_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
